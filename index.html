@@ -11,6 +11,27 @@
 :root{--P:#1e1b3a;--P2:#2d2955;--P3:#3d3870;--A:#8b3d7a;--A2:#a84d92;--A3:#c960ac;--bg:#f2f1f8;--bg2:#e8e6f2;--bg3:#dddaf0;--sur:#ffffff;--sur2:#f7f6fc;--sur3:#efedfa;--bdr:rgba(53,48,102,0.12);--bdr2:rgba(53,48,102,0.2);--tx:#14122a;--tx2:#4a4670;--tx3:#8580a8;--tx4:#b8b4d4;--red:#d63031;--red2:#ff7675;--red-bg:#fff0f0;--grn:#00875a;--grn2:#55efc4;--grn-bg:#f0fff8;--amb:#b7791f;--amb2:#f6c90e;--amb-bg:#fffbeb;--blu:#2b6cb0;--blu-bg:#ebf4ff;--r:14px;--r2:10px;--r3:6px;--sw:256px;--hh:60px;--sh:0 1px 3px rgba(30,27,58,.06),0 4px 20px rgba(30,27,58,.08);--sh2:0 8px 40px rgba(30,27,58,.16);--sh3:0 0 0 3px rgba(139,61,122,.18);}
 [data-dark]{--bg:#0e0c1e;--bg2:#13112b;--bg3:#1a1838;--sur:#19172e;--sur2:#201e38;--sur3:#272545;--bdr:rgba(255,255,255,0.07);--bdr2:rgba(255,255,255,0.13);--tx:#f0eeff;--tx2:#a098d0;--tx3:#6860a0;--tx4:#3d3860;--red-bg:rgba(214,48,49,.1);--grn-bg:rgba(0,135,90,.1);--amb-bg:rgba(183,121,31,.1);--blu-bg:rgba(43,108,176,.1);}
 *{margin:0;padding:0;box-sizing:border-box;}
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDudxgpKRRVPj8LLoRfj3kFGJ45Eb1q7nE",
+  authDomain: "clinicops-erp.firebaseapp.com",
+  projectId: "clinicops-erp",
+  storageBucket: "clinicops-erp.firebasestorage.app",
+  messagingSenderId: "634425201001",
+  appId: "1:634425201001:web:29a6708924352358936df8",
+  measurementId: "G-D97J6QH4Y8"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 html,body{height:100%;overflow:hidden;}
 body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--tx);display:flex;height:100vh;}
 #sidebar{width:var(--sw);background:var(--P);display:flex;flex-direction:column;flex-shrink:0;z-index:100;}
